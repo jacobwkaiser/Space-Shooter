@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://xr7ivafq6qjj"]
+
+[ext_resource type="Script" path="res://player/Player.gd" id="1_bag21"]
+[ext_resource type="Texture2D" uid="uid://bxwjws0xn0t8c" path="res://Assets/kenney_space-shooter-extension/PNG/Sprites/Ships/spaceShips_008.png" id="1_hjr7c"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(550, 320)
+script = ExtResource("1_bag21")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+rotation = 3.14159
+texture = ExtResource("1_hjr7c")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+rotation = -3.14159
+polygon = PackedVector2Array(26, -40.4, 29.3, -33, 30.6, -33, 45, -24.1, 45, -18.4, 50, 7.5, 50, 38.2, 48.3, 41, 31, 41, 31, 39, 30.5, 37.2, 24, 38.4, 24, 35.6, 19, 27.6, 19, 21.6, 20, 19, 16.4, 19, 10.4, 37, -10, 37, -10, 35.2, -14, 33.2, -14, 29, -16.5, 19, -21, 19, -21, 20, -18.3, 29, -20.7, 29, -24.7, 38, -29.6, 38, -30.8, 41, -48.8, 41, -50, 39.8, -50, 37, -50, 11.2, -44.7, -25, -42.5, -25, -30, -32.1, -26, -40.5, -4, -41, -4, -40.4, -3.3, -37, 3, -37, 3, -41, 26, -41)
