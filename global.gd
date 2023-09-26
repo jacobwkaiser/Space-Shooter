@@ -15,8 +15,9 @@ func _ready():
 
 func update_lives(l):
 	lives += l
-	var hud = get_node_or_null("root/Game/UI/HUD")
+	var hud = get_node_or_null("/root/Game/UI/HUD")
 	if hud != null:
+		print("update lives")
 		hud.update_lives()
 	if lives < 0:
 		get_tree().change_scene_to_file("res://UI/end_game.tscn")
@@ -32,7 +33,7 @@ func update_time(t):
 
 func _resize():
 	VP = get_viewport().size
-	var hud = get_node_or_null("root/Game/UI/HUD")
+	var hud = get_node_or_null("/root/Game/UI/HUD")
 	if hud != null:
 		hud.update_lives()
 
