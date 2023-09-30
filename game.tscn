@@ -1,14 +1,37 @@
-[gd_scene load_steps=8 format=3 uid="uid://xr7ivafq6qjj"]
+[gd_scene load_steps=12 format=3 uid="uid://xr7ivafq6qjj"]
 
+[ext_resource type="Texture2D" uid="uid://br0y8hogrqbqx" path="res://UI/5471985.jpg" id="1_0v2mk"]
 [ext_resource type="PackedScene" uid="uid://b8qm7l21llkww" path="res://player/player.tscn" id="1_rphhr"]
 [ext_resource type="PackedScene" uid="uid://c54u7dxhweh24" path="res://Asteroid/asteroid.tscn" id="2_atqxi"]
 [ext_resource type="Script" path="res://player/Player_Container.gd" id="2_h2vs1"]
+[ext_resource type="Texture2D" uid="uid://du2elg00vmaky" path="res://Assets/kenney_planets/Planets/planet09.png" id="3_1fk0o"]
 [ext_resource type="PackedScene" uid="uid://cavuv2gepg3xq" path="res://Enemy/enemy.tscn" id="3_l3cn8"]
 [ext_resource type="Script" path="res://UI/HUD.gd" id="5_e2iey"]
 [ext_resource type="FontFile" uid="uid://cjjywt35swp67" path="res://Assets/a_space/A-Space Regular Demo.otf" id="5_m18bj"]
 [ext_resource type="Script" path="res://UI/Menu.gd" id="7_hdmy0"]
+[ext_resource type="Texture2D" uid="uid://deg8qhh77sb5q" path="res://Assets/kenney_planets/Planets/planet08.png" id="9_xrq1v"]
+[ext_resource type="Texture2D" uid="uid://d3dpydx1m3p6l" path="res://Assets/kenney_planets/Planets/planet07.png" id="11_n5ep1"]
 
 [node name="Game" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_0v2mk")
+centered = false
+offset = Vector2(-300, 0)
+
+[node name="Planet1" type="Sprite2D" parent="."]
+position = Vector2(2345, 1227)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("9_xrq1v")
+
+[node name="Planet2" type="Sprite2D" parent="."]
+position = Vector2(1618, 136)
+texture = ExtResource("3_1fk0o")
+
+[node name="Planet3" type="Sprite2D" parent="."]
+position = Vector2(514, 869)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("11_n5ep1")
 
 [node name="Asteroid_Container" type="Node2D" parent="."]
 
